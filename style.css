@@ -12,6 +12,24 @@ body {
   margin: 0 auto;
   padding: 2em;
 }
+.link-box, .link-box a, .link-box h2, .link-box p {
+  background-color: #c9c9c9 !important;
+  color: #000 !important;
+  text-decoration: none !important;
+}
+.link-box a:hover, .link-box:hover {
+  text-decoration: none !important;
+  background-color: #b3b3b3;
+  color: #000 !important;
+}
+.link-box h2 {
+  margin: 0.4em 0 0.2em 0;
+  font-size: 1.2em;
+}
+.link-box p {
+  margin: 0;
+  font-size: 0.95em;
+}
 
 .link-grid {
   display: flex;

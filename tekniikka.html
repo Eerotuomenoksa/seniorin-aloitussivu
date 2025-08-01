@@ -6,7 +6,11 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body>
+<body style="background: #fff;">
+  <header style="background: #330066; color: #fff; text-align: center; padding: 1em 0 1.5em 0;">
+    <span class="material-symbols-outlined" aria-hidden="true" style="font-size:2.5em; vertical-align:middle;">precision_manufacturing</span>
+    <span style="font-size:2em; vertical-align:middle; margin-left:0.3em;">Tekniikka</span>
+  </header>
   <div class="top-buttons" style="position: absolute; top: 15px; left: 20px; right: 20px; display: flex; justify-content: space-between;">
     <a href="index.html" class="nav-button">← Palaa etusivulle</a>
     <div style="display: flex; gap: 0.75em;">
@@ -15,81 +19,95 @@
     </div>
   </div>
   <main class="container">
-    <h1>Tekniikka</h1>
     <div class="link-grid">
-      <a class="link-box" href="https://tekniikka.talous.fi" target="_blank" rel="noopener">
-        Tekniikka&Talous<br><small>Ajankohtaiset uutiset teknologiasta ja taloudesta.</small>
-      </a>
-      <a class="link-box" href="https://www.tietoviikko.fi" target="_blank" rel="noopener">
-        Tietoviikko<br><small>IT-alan uutiset ja analyysit.</small>
-      </a>
-      <a class="link-box" href="https://www.digitoday.fi" target="_blank" rel="noopener">
-        Digitoday<br><small>Teknologia-uutisia ja testejä.</small>
-      </a>
-      <a class="link-box" href="https://www.tekniikkajakorjaus.fi" target="_blank" rel="noopener">
-        Tekniikka & Rakentaminen<br><small>Rakentamisen ja teknologian yhdistäjä.</small>
-      </a>
-      <a class="link-box" href="https://www.ilry.fi" target="_blank" rel="noopener">
-        Insinööriliitto<br><small>Insinöörien ammatillinen järjestö ja uutiset.</small>
-      </a>
-      <a class="link-box" href="https://www.sulake.com" target="_blank" rel="noopener">
-        Sulake<br><small>Teknologiapalveluja ja ohjelmistoja.</small>
-      </a>
-      <a class="link-box" href="https://www.stl.fi" target="_blank" rel="noopener">
-        Suomen Tekniset Liitot<br><small>Teknisten alojen yhdistys- ja edunvalvontajärjestö.</small>
-      </a>
-      <a class="link-box" href="https://www.arvosteleva.fi" target="_blank" rel="noopener">
-        Arvosteleva<br><small>Kuluttaja-arvosteluja teknisistä tuotteista.</small>
-      </a>
-      <a class="link-box" href="https://www.tekniikkatalous.fi" target="_blank" rel="noopener">
-        Tekniikkatalous<br><small>Teknologia- ja yritysuutisia.</small>
-      </a>
-      <a class="link-box" href="https://www.mobilisti.fi" target="_blank" rel="noopener">
-        Mobilisti<br><small>Liikenteen ja teknologian uutisia.</small>
-      </a>
+      <div class="link-box">
+        <a href="https://www.tietoviikko.fi" target="_blank" rel="noopener">
+          <h2>Tietoviikko</h2>
+          <p>IT-alan uutiset ja analyysit.</p>
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://www.digitoday.fi" target="_blank" rel="noopener">
+          <h2>Digitoday</h2>
+          <p>Teknologia-uutisia ja testejä.</p>
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://www.ilry.fi" target="_blank" rel="noopener">
+          <h2>Insinööriliitto</h2>
+          <p>Insinöörien ammatillinen järjestö ja uutiset.</p>
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://www.tekniikkatalous.fi" target="_blank" rel="noopener">
+          <h2>Tekniikkatalous</h2>
+          <p>Teknologia- ja yritysuutisia.</p>
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://www.mobilisti.fi" target="_blank" rel="noopener">
+          <h2>Mobilisti</h2>
+          <p>Liikenteen ja teknologian uutisia.</p>
+        </a>
+      </div>
       <!-- Autoilu -->
-      <a class="link-box" href="https://www.autobild.fi" target="_blank" rel="noopener">
-        AutoBild Suomi<br><small>Autouutisia, testejä ja koeajoja.</small>
-      </a>
-      <a class="link-box" href="https://www.autotalli.com" target="_blank" rel="noopener">
-        Autotalli.com<br><small>Autojen myynti ja ostopalvelut.</small>
-      </a>
-      <a class="link-box" href="https://www.moottori.fi" target="_blank" rel="noopener">
-        Moottori<br><small>Autouutisia ja -arvosteluja.</small>
-      </a>
-      <a class="link-box" href="https://www.autoliitto.fi" target="_blank" rel="noopener">
-        Autoliitto<br><small>Kuljettajan palvelut ja neuvonta.</small>
-      </a>
+      <div class="link-box">
+        <a href="https://www.autobild.fi" target="_blank" rel="noopener">
+          <h2>AutoBild Suomi</h2>
+          <p>Autouutisia, testejä ja koeajoja.</p>
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://www.autotalli.com" target="_blank" rel="noopener">
+          <h2>Autotalli.com</h2>
+          <p>Autojen myynti ja ostopalvelut.</p>
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://www.moottori.fi" target="_blank" rel="noopener">
+          <h2>Moottori</h2>
+          <p>Autouutisia ja -arvosteluja.</p>
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://www.autoliitto.fi" target="_blank" rel="noopener">
+          <h2>Autoliitto</h2>
+          <p>Kuljettajan palvelut ja neuvonta.</p>
+        </a>
+      </div>
       <!-- Rakentaminen -->
-      <a class="link-box" href="https://www.rakennuslehti.fi" target="_blank" rel="noopener">
-        Rakennuslehti<br><small>Rakennusalan uutiset ja tiedot.</small>
-      </a>
-      <a class="link-box" href="https://www.raksystems.fi" target="_blank" rel="noopener">
-        Raksystems<br><small>Rakennustarkastus- ja konsultointipalvelut.</small>
-      </a>
-      <a class="link-box" href="https://www.taloon.com" target="_blank" rel="noopener">
-        Taloon.com<br><small>Asumiseen ja rakentamiseen liittyviä neuvoja.</small>
-      </a>
-      <a class="link-box" href="https://www.remontti-info.fi" target="_blank" rel="noopener">
-        Remontti-info<br><small>Vinkkejä remontteihin ja sisustukseen.</small>
-      </a>
+      <div class="link-box">
+        <a href="https://www.rakennuslehti.fi" target="_blank" rel="noopener">
+          <h2>Rakennuslehti</h2>
+          <p>Rakennusalan uutiset ja tiedot.</p>
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://www.taloon.com" target="_blank" rel="noopener">
+          <h2>Taloon.com</h2>
+          <p>Asumiseen ja rakentamiseen liittyviä neuvoja.</p>
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://www.remontti-info.fi" target="_blank" rel="noopener">
+          <h2>Remontti-info</h2>
+          <p>Vinkkejä remontteihin ja sisustukseen.</p>
+        </a>
+      </div>
       <!-- Veneily -->
-      <a class="link-box" href="https://www.venelehti.fi" target="_blank" rel="noopener">
-        Venelehti<br><small>Veneilyuutiset ja -vinkit.</small>
-      </a>
-      <a class="link-box" href="https://www.vene.com" target="_blank" rel="noopener">
-        Vene.com<br><small>Veneiden myynti- ja ostopalvelut.</small>
-      </a>
-      <a class="link-box" href="https://www.veneliitto.fi" target="_blank" rel="noopener">
-        Suomen Veneilyliitto<br><small>Veneilijöiden järjestö ja tapahtumat.</small>
-      </a>
-      <a class="link-box" href="https://www.veneily.info" target="_blank" rel="noopener">
-        Veneily.info<br><small>Veneilyaiheista tietoa ja neuvoja.</small>
-      </a>
+      <div class="link-box">
+        <a href="https://www.venelehti.fi" target="_blank" rel="noopener">
+          <h2>Kippari</h2>
+          <p>Veneilyuutiset ja -vinkit.</p>
+        </a>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:3em;">
+      <a href="index.html" class="nav-button" style="font-size:1.3em; padding:12px 24px; margin:auto; display:inline-block;">← Palaa etusivulle</a>
     </div>
   </main>
   <footer>
-    <div style="background-color: #330066; color: #fff; text-align: center; padding: 1em; margin-top: 2em;">
+    <div style="background-color: #c9c9c9; color: #000; text-align: center; padding: 1em; margin-top: 2em;">
       <img src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg" alt="SeniorSurf logo" style="height: 40px; vertical-align: middle;">
       <span style="margin-left: 12px;">SeniorSurf &copy; 2025</span>
     </div>

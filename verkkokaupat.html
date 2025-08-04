@@ -1,98 +1,105 @@
-
 <!DOCTYPE html>
-
 <html lang="fi">
 <head>
-<link href="styles.css" rel="stylesheet"/>
-<meta charset="utf-8"/>
-<title>Verkkokaupat</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <title>Verkkokaupat</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body><div class="top-buttons" style="position: absolute; top: 15px; left: 20px; right: 20px; display: flex; justify-content: space-between;"><a class="nav-button" href="index.html">← Palaa etusivulle</a><div style="display: flex; gap: 0.75em;"><a class="nav-button" href="info.html">Info</a><a class="nav-button" href="aloitussivu.html">Tee aloitussivuksi</a></div></div>
-<header>
-<div style="text-align:center; margin-bottom: 10px;">
-<a href="index.html" style="display:inline-block; background-color:#330066; color:#fff; padding:10px 20px; text-decoration:none; border-radius:8px; font-weight:bold;">
-      ← Palaa etusivulle
-    </a>
-</div>
-<h1><span aria-hidden="true" class="material-symbols-outlined">shopping_cart</span>Verkkokaupat</h1>
-</header>
-<div class="container">
-<div class="link-grid">
-<a class="link-box" href="https://www.verkkokauppa.com" rel="noopener" target="_blank">
-<div>Verkkokauppa.com</div>
-<small>Elektroniikkaa, kodinkoneita ja vapaa-ajan tuotteita.</small>
-</a>
-<a class="link-box" href="https://www.gigantti.fi" rel="noopener" target="_blank">
-<div>Gigantti</div>
-<small>Kodinelektroniikkaa, keittiökoneita ja tietotekniikkaa.</small>
-</a>
-<a class="link-box" href="https://www.prisma.fi" rel="noopener" target="_blank">
-<div>Prisma</div>
-<small>Monipuolinen tavaratalo ruuasta vaatteisiin.</small>
-</a>
-<a class="link-box" href="https://www.tokmanni.fi" rel="noopener" target="_blank">
-<div>Tokmanni</div>
-<small>Halpakauppa, joka tarjoaa kaikkea arkeen.</small>
-</a>
-<a class="link-box" href="https://www.lidl.fi" rel="noopener" target="_blank">
-<div>Lidl</div>
-<small>Erikoistarjouksia ja tuotteita – verkkoselailu.</small>
-</a>
-<a class="link-box" href="https://www.k-ruoka.fi" rel="noopener" target="_blank">
-<div>K-Ruoka</div>
-<small>Kauppojen verkkotilaus ja reseptipalvelu.</small>
-</a>
-<a class="link-box" href="https://www.zalando.fi" rel="noopener" target="_blank">
-<div>Zalando</div>
-<small>Vaatteita ja asusteita kotiin kuljetettuna.</small>
-</a>
-<a class="link-box" href="https://www.adlibris.com/fi" rel="noopener" target="_blank">
-<div>Adlibris</div>
-<small>Verkkokirjakauppa, jossa myös pelejä ja askartelua.</small>
-</a>
-<a class="link-box" href="https://hintaseuranta.fi" rel="noopener" target="_blank">
-<div>Hintaseuranta.fi</div>
-<small>Tuotteiden hinnanseuranta ja vertailu.</small>
-</a>
-<a class="link-box" href="https://www.kkv.fi/verkkokauppa" rel="noopener" target="_blank">
-<div>KKV – Turvallinen verkkokauppa</div>
-<small>Ohjeita ja neuvoja kuluttajille.</small>
-</a>
-<a class="link-box" href="https://www.taitoshop.fi" rel="noopener" target="_blank">
-<div>Taito Shop</div>
-<small>Kotimaisia käsitöitä ja design-tuotteita.</small>
-</a>
-<a class="link-box" href="https://www.weecos.com" rel="noopener" target="_blank">
-<div>Weecos</div>
-<small>Eettisiä ja ekologisia vaatteita ja asusteita.</small>
-</a>
-<a class="link-box" href="https://www.madeby.fi" rel="noopener" target="_blank">
-<div>Madeby.fi</div>
-<small>Suomalaisten käsityöläisten tuotteita.</small>
-</a>
-<a class="link-box" href="https://www.emmy.fi" rel="noopener" target="_blank">
-<div>Emmy</div>
-<small>Verkkokirppis hyväkuntoisille vaatteille.</small>
-</a>
-<a class="link-box" href="https://www.tori.fi" rel="noopener" target="_blank">
-<div>Tori.fi</div>
-<small>Myyntipaikka käytetyille tavaroille ja huonekaluille.</small>
-</a>
-<a class="link-box" href="https://www.vahankaytetty.fi" rel="noopener" target="_blank">
-<div>Vähänkäytetty.fi</div>
-<small>Lasten ja nuorten käytettyjä vaatteita verkossa.</small>
-</a>
-</div>
-</div>
-<div style="text-align:center; margin: 30px;">
-<a href="index.html" style="display:inline-block; background-color:#330066; color:#fff; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:bold;">
-    ← Takaisin etusivulle
-  </a>
-</div>
-<footer>
-<p>© 2025 SeniorSurf</p>
-<img alt="SeniorSurf logo" src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg"/>
-</footer>
+<body>
+  <header style="background: #330066; color: #fff; position: relative; text-align: center; padding: 1.2em 0;">
+    <a href="index.html" class="nav-button" style="position:absolute; left:2em; top:1.2em;">← Palaa etusivulle</a>
+    <span class="material-symbols-outlined" aria-hidden="true" style="font-size:2em;vertical-align:middle;">shopping_cart</span>
+    <span style="font-size:2em; vertical-align:middle; margin-left:0.3em;">Verkkokaupat</span>
+  </header>
+  <main class="container">
+    <div class="link-box harmaa">
+      <a href="https://www.verkkokauppa.com/" target="_blank" rel="noopener">
+        <h2>Verkkokauppa.com</h2>
+        <p>Kodin elektroniikka ja vapaa-aika</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.prisma.fi/" target="_blank" rel="noopener">
+        <h2>Prisma</h2>
+        <p>Ruoka, kodin tuotteet ja käyttötavarat</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.k-ruoka.fi/" target="_blank" rel="noopener">
+        <h2>K-Ruoka</h2>
+        <p>Kauppojen valikoimat ja ruoan verkkokauppa</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.tokmanni.fi/" target="_blank" rel="noopener">
+        <h2>Tokmanni</h2>
+        <p>Edulliset kodin ja vapaa-ajan tuotteet</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.sokos.fi/" target="_blank" rel="noopener">
+        <h2>Sokos</h2>
+        <p>Kauneus, pukeutuminen ja sisustus</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.ellos.fi/" target="_blank" rel="noopener">
+        <h2>Ellos</h2>
+        <p>Vaatteet ja kodin sisustus</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.hobbyhall.fi/" target="_blank" rel="noopener">
+        <h2>Hobby Hall</h2>
+        <p>Kodin, vapaa-ajan ja elektroniikan tuotteet</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.apteekki.fi/" target="_blank" rel="noopener">
+        <h2>Apteekki.fi</h2>
+        <p>Lääkkeet ja terveystuotteet verkosta</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.isku.fi/" target="_blank" rel="noopener">
+        <h2>Isku</h2>
+        <p>Kodin kalusteet ja sisustus</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.vepsalainen.com/" target="_blank" rel="noopener">
+        <h2>Vepsäläinen</h2>
+        <p>Laatukalusteet kotiin</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.asko.fi/" target="_blank" rel="noopener">
+        <h2>Asko</h2>
+        <p>Sisustus, sohvat ja sängyt</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.jysk.fi/" target="_blank" rel="noopener">
+        <h2>Jysk</h2>
+        <p>Kodin kalusteet ja makuuhuone</p>
+      </a>
+    </div>
+    <div class="link-box harmaa">
+      <a href="https://www.clasohlson.com/fi" target="_blank" rel="noopener">
+        <h2>Clas Ohlson</h2>
+        <p>Kodin tarvikkeet ja pienelektroniikka</p>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:3em;">
+      <a href="index.html" class="nav-button" style="font-size:1.3em; padding:12px 24px; margin:auto; display:inline-block;">← Palaa etusivulle</a>
+    </div>
+  </main>
+  <footer>
+    <div style="background: #c9c9c9; color: #000; text-align: center; padding: 1em; margin-top: 2em;">
+      <img src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg" alt="SeniorSurf logo" style="height: 40px; vertical-align: middle;">
+      <span style="margin-left: 12px;">SeniorSurf &copy; 2025</span>
+    </div>
+  </footer>
 </body>
 </html>

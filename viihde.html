@@ -1,94 +1,87 @@
-
 <!DOCTYPE html>
-
 <html lang="fi">
 <head>
-<link href="styles.css" rel="stylesheet"/>
-<meta charset="utf-8"/>
-<title>Viihde</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <title>Viihde</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body><div class="top-buttons" style="position: absolute; top: 15px; left: 20px; right: 20px; display: flex; justify-content: space-between;"><a class="nav-button" href="index.html">← Palaa etusivulle</a><div style="display: flex; gap: 0.75em;"><a class="nav-button" href="info.html">Info</a><a class="nav-button" href="aloitussivu.html">Tee aloitussivuksi</a></div></div>
-<header>
-<div style="text-align:center; margin-bottom: 10px;">
-<a href="index.html" style="display:inline-block; background-color:#330066; color:#fff; padding:10px 20px; text-decoration:none; border-radius:8px; font-weight:bold;">
-      ← Palaa etusivulle
-    </a>
-</div>
-<h1><span aria-hidden="true" class="material-symbols-outlined">movie</span>Viihde</h1>
-</header>
-<div class="container">
-<div class="link-grid">
-<a class="link-box" href="https://areena.yle.fi" rel="noopener" target="_blank">
-<div>Yle Areena – Viihde</div>
-<small>TV-ohjelmia, sarjoja ja komediaa ilmaiseksi.</small>
-</a>
-<a class="link-box" href="https://www.ruutu.fi" rel="noopener" target="_blank">
-<div>Ruutu</div>
-<small>Suomalaisia sarjoja, sketsejä ja reality-ohjelmia.</small>
-</a>
-<a class="link-box" href="https://www.mtv.fi/katsomo" rel="noopener" target="_blank">
-<div>MTV Katsomo</div>
-<small>Viihdettä, draamaa ja uutisia.</small>
-</a>
-<a class="link-box" href="https://www.netflix.com" rel="noopener" target="_blank">
-<div>Netflix</div>
-<small>Laaja valikoima sarjoja, elokuvia ja dokumentteja.</small>
-</a>
-<a class="link-box" href="https://www.hbomax.com/fi/fi" rel="noopener" target="_blank">
-<div>HBO Max</div>
-<small>Laatusarjoja ja elokuvia tilauksella.</small>
-</a>
-<a class="link-box" href="https://www.cmore.fi" rel="noopener" target="_blank">
-<div>C More</div>
-<small>Kotimaiset sarjat, elokuvat ja urheilu.</small>
-</a>
-<a class="link-box" href="https://www.youtube.com" rel="noopener" target="_blank">
-<div>YouTube</div>
-<small>Videoita, kanavia ja yhteisösisältöä maailmanlaajuisesti.</small>
-</a>
-<a class="link-box" href="https://www.spotify.com" rel="noopener" target="_blank">
-<div>Spotify – Podcastit</div>
-<small>Podcasteja viihteestä, huumorista ja keskusteluista.</small>
-</a>
-<a class="link-box" href="https://www.seiska.fi" rel="noopener" target="_blank">
-<div>Seiska</div>
-<small>Julkkisuutiset ja viihdejuorut.</small>
-</a>
-<a class="link-box" href="https://www.menaiset.fi" rel="noopener" target="_blank">
-<div>Me Naiset</div>
-<small>Inhimillistä viihdettä ja ilmiöitä.</small>
-</a>
-<a class="link-box" href="https://www.pelikone.fi" rel="noopener" target="_blank">
-<div>Pelikone.fi</div>
-<small>Satoja ilmaisia selainpelejä ajanvietteeksi.</small>
-</a>
-<a class="link-box" href="https://www.funnygames.fi" rel="noopener" target="_blank">
-<div>FunnyGames.fi</div>
-<small>Pelattavaa laidasta laitaan, yksin ja yhdessä.</small>
-</a>
-<a class="link-box" href="https://www.buzzfeed.com" rel="noopener" target="_blank">
-<div>BuzzFeed</div>
-<small>Viihdettä, meemejä ja testejä kepeässä muodossa.</small>
-</a>
-<a class="link-box" href="https://imgur.com" rel="noopener" target="_blank">
-<div>Kuvapankki – Meemit &amp; huumori</div>
-<small>Hauskoja kuvia ja meemejä käyttäjien jakamana.</small>
-</a>
-<a class="link-box" href="https://www.koulukaverit.fi/visat" rel="noopener" target="_blank">
-<div>Kuvatos.fi – Visat ja testit</div>
-<small>Tee testejä, ratko tehtäviä ja testaa tietosi.</small>
-</a>
-</div>
-</div>
-<div style="text-align:center; margin: 30px;">
-<a href="index.html" style="display:inline-block; background-color:#330066; color:#fff; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:bold;">
-    ← Takaisin etusivulle
-  </a>
-</div>
-<footer>
-<p>© 2025 SeniorSurf</p>
-<img alt="SeniorSurf logo" src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg"/>
-</footer>
+<body>
+  <header style="background: #330066; color: #fff; position: relative; text-align: center; padding: 1.2em 0;">
+    <a href="index.html" class="nav-button" style="position:absolute; left:2em; top:1.2em;">← Palaa etusivulle</a>
+    <span class="material-symbols-outlined" aria-hidden="true" style="font-size:2em;vertical-align:middle;">movie</span>
+    <span style="font-size:2em; vertical-align:middle; margin-left:0.3em;">Viihde</span>
+  </header>
+  <main class="container">
+    <div class="link-box sininen">
+      <a href="https://areena.yle.fi/tv" target="_blank" rel="noopener">
+        <h2>Yle Areena</h2>
+        <p>Ilmaiset elokuvat, sarjat ja dokumentit</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.katsomo.fi/" target="_blank" rel="noopener">
+        <h2>MTV Katsomo</h2>
+        <p>TV-sarjat, elokuvat ja suorat lähetykset</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.ruutu.fi/" target="_blank" rel="noopener">
+        <h2>Ruutu</h2>
+        <p>Sarjat, elokuvat ja urheilu netissä</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.netflix.com/fi/" target="_blank" rel="noopener">
+        <h2>Netflix</h2>
+        <p>Suosittu kansainvälinen suoratoistopalvelu</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.disneyplus.com/fi-fi" target="_blank" rel="noopener">
+        <h2>Disney+</h2>
+        <p>Elokuvia, klassikoita ja sarjoja kaikenikäisille</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.cmore.fi/" target="_blank" rel="noopener">
+        <h2>C More</h2>
+        <p>Elokuvat, sarjat ja urheilua tilauksella</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.sfanytime.com/fi/" target="_blank" rel="noopener">
+        <h2>SF Anytime</h2>
+        <p>Vuokra- ja osta elokuvia netissä</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.viaplay.fi/" target="_blank" rel="noopener">
+        <h2>Viaplay</h2>
+        <p>Elokuvia, sarjoja ja urheilua</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.elonet.fi/" target="_blank" rel="noopener">
+        <h2>Elonet</h2>
+        <p>Kansallinen elokuvien tietopankki</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.pelaa.fi/" target="_blank" rel="noopener">
+        <h2>Pelaa.fi</h2>
+        <p>Suomalaisia nettipelejä ja viihdettä</p>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:3em;">
+      <a href="index.html" class="nav-button" style="font-size:1.3em; padding:12px 24px; margin:auto; display:inline-block;">← Palaa etusivulle</a>
+    </div>
+  </main>
+  <footer>
+    <div style="background: #c9c9c9; color: #000; text-align: center; padding: 1em; margin-top: 2em;">
+      <img src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg" alt="SeniorSurf logo" style="height: 40px; vertical-align: middle;">
+      <span style="margin-left: 12px;">SeniorSurf &copy; 2025</span>
+    </div>
+  </footer>
 </body>
 </html>

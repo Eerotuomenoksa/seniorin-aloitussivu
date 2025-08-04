@@ -53,6 +53,74 @@
   text-decoration: none;
 }
 
+/* Header ja footer yleiset */
+.main-header {
+  background: #330066;
+  color: #fff;
+  text-align: center;
+  padding: 1.2em 0;
+  position: relative;
+}
+
+.header-links {
+  position: absolute;
+  right: 2em;
+  top: 1.2em;
+  display: flex;
+  gap: 1em;
+}
+
+.header-btn {
+  background: #4abdc9;
+  color: #fff;
+  padding: 0.5em 1.2em;
+  border-radius: 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.header-btn:hover,
+.header-btn:focus {
+  background: #f49638;
+  color: #fff;
+}
+
+/* Paluu etusivulle -painike vasemmalla */
+.nav-button {
+  background: #c9c9c9;
+  color: #330066;
+  padding: 0.5em 1.2em;
+  border-radius: 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  position: absolute;
+  left: 2em;
+  top: 1.2em;
+}
+.nav-button:hover,
+.nav-button:focus {
+  background: #4abdc9;
+  color: #fff;
+}
+
+/* Footer yhtenäinen */
+.site-footer {
+  background: #c9c9c9;
+  color: #000;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+.site-footer .footer-logo {
+  height: 40px;
+  vertical-align: middle;
+}
+.site-footer .footer-text {
+  margin-left: 12px;
+}
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;

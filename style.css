@@ -55,7 +55,7 @@ body {
   color: #fff;
 }
 
-/* Paluu etusivulle -painike vasemmalla */
+/* Headerissa oleva nav-button */
 .nav-button {
   background: #c9c9c9;
   color: #330066;
@@ -76,6 +76,32 @@ body {
   background: #4abdc9;
   color: #fff;
 }
+
+/* Alaosan keskitetty paluu-nappi */
+.main-back-btn-row {
+  text-align: center;
+  margin-top: 3em;
+}
+.main-back-btn {
+  background: #c9c9c9;
+  color: #330066;
+  padding: 0.8em 2.1em;
+  border-radius: 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  display: inline-block;
+  margin: auto;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.main-back-btn:hover,
+.main-back-btn:focus {
+  background: #4abdc9;
+  color: #fff;
+}
+
 
 /* Linkkilaatikot ja väriblokit */
 .link-box {

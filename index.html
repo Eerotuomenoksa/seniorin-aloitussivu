@@ -23,31 +23,17 @@
     "torstai", "perjantai", "lauantai"
   ];
   // Nimipäivät ja liputuspäivät
-  function naytaPaivainfo() {
-    const nyt = new Date();
-    const viikonpaiva = paivat[nyt.getDay()];
-    const pv = nyt.getDate();
-    const kk = nyt.getMonth() + 1;
-    const v = nyt.getFullYear();
-    const h = nyt.getHours().toString().padStart(2,"0");
-    const min = nyt.getMinutes().toString().padStart(2,"0");
-    const paivamaara = `${viikonpaiva} ${pv}.${kk}.${v} ${h}:${min}`;
-    fetch(`https://nimipaivat.fi/api/${v}/${kk}/${pv}`)
-      .then(r => r.json())
-      .then(data => {
-        let html = `<strong>${paivamaara}</strong>`;
-        if (data.fi && data.fi.length) {
-          html += ` <br> Nimipäivät: <span style="font-weight:600;">${data.fi.join(", ")}</span>`;
-        }
-        if (data.flagday && data.flagday.length) {
-          html += `<br> <span style="color:#330066; font-weight:600;">&#x1F1EE;&#x1F1F9; Liputuspäivä: ${data.flagday[0]}</span>`;
-        }
-        document.getElementById('paivainfo').innerHTML = html;
-      });
-  }
-  naytaPaivainfo();
-  setInterval(naytaPaivainfo, 30000);
-  </script>
+  <script>
+function naytaPaiva() {
+  const nyt = new Date();
+  const pv = nyt.getDate();
+  const kk = nyt.getMonth() + 1;
+  const v = nyt.getFullYear();
+  document.getElementById('paivainfo').textContent = `Tänään on ${pv}.${kk}.${v}`;
+}
+naytaPaiva();
+</script>
+
     
     <div class="link-box harmaa">
       <a href="hengellisyys.html">

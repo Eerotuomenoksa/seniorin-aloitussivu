@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-<meta charset="UTF-8">
-<title>Pankit</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Pankit</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
-<div class="top-buttons">
-  <a href="index.html" class="nav-button">← Palaa etusivulle</a>
-  <div style="display: flex; gap: 0.75em;">
-    <a href="info.html" class="nav-button">Info</a>
-    <a href="aloitussivu.html" class="nav-button">Tee aloitussivuksi</a>
-  </div>
-</div>
-<main class="container">
-<h1>Pankit</h1>
-<div class="link-grid">
-  <a class="link-box" href="https://www.nordea.fi" target="_blank" rel="noopener">
-    <div>Nordea</div>
-    <small>Suurin pankki Pohjoismaissa, kattavat palvelut.</small>
-  </a>
-  <a class="link-box" href="https://www.op.fi" target="_blank" rel="noopener">
-    <div>OP Ryhmä</div>
-    <small>Suomalainen osuuspankkiryhmä ja laaja palveluverkosto.</small>
-  </a>
-  <a class="link-box" href="https://www.danskebank.fi" target="_blank" rel="noopener">
-    <div>Danske Bank</div>
-    <small>Pohjoismainen pankki Suomessa.</small>
-  </a>
-  <a class="link-box" href="https://www.s-pankki.fi" target="_blank" rel="noopener">
-    <div>S-Pankki</div>
-    <small>Pankkipalvelut S-ryhmän asiakkaille.</small>
-  </a>
-  <a class="link-box" href="https://www.aktia.fi" target="_blank" rel="noopener">
-    <div>Aktia</div>
-    <small>Paikallinen pankki ja vakuutukset.</small>
-  </a>
-  <a class="link-box" href="https://www.handelsbanken.fi" target="_blank" rel="noopener">
-    <div>Handelsbanken</div>
-    <small>Ruotsalainen pankki Suomessa.</small>
-  </a>
-  <a class="link-box" href="https://www.taaleri.com" target="_blank" rel="noopener">
-    <div>Taaleri</div>
-    <small>Pankki- ja sijoituspalvelut.</small>
-  </a>
-  <a class="link-box" href="https://www.finanssiala.fi" target="_blank" rel="noopener">
-    <div>Finanssiala</div>
-    <small>Finanssialan keskusliitto, neuvonta ja ohjeet.</small>
-  </a>
-  <a class="link-box" href="https://www.kkv.fi/pankkipalvelut" target="_blank" rel="noopener">
-    <div>Kuluttajavirasto – Pankkipalvelut</div>
-    <small>Kuluttajansuoja pankkiasioissa.</small>
-  </a>
-  <a class="link-box" href="https://verkkopankkiopas.fi" target="_blank" rel="noopener">
-    <div>Verkkopankkiopas.fi</div>
-    <small>Opas verkkopankkien käyttöön senioreille.</small>
-  </a>
-</div>
-</main>
+  <header style="background: #330066; color: #fff; position: relative; text-align: center; padding: 1.2em 0;">
+    <a href="index.html" class="nav-button" style="position:absolute; left:2em; top:1.2em;">← Palaa etusivulle</a>
+    <span class="material-symbols-outlined" aria-hidden="true" style="font-size:2em;vertical-align:middle;">account_balance_wallet</span>
+    <span style="font-size:2em; vertical-align:middle; margin-left:0.3em;">Pankit</span>
+  </header>
+  <main class="container">
+    <div class="link-box violetti">
+      <a href="https://www.op.fi" target="_blank" rel="noopener">
+        <h2>Osuuspankki (OP)</h2>
+      </a>
+    </div>
+    <div class="link-box violetti">
+      <a href="https://www.nordea.fi" target="_blank" rel="noopener">
+        <h2>Nordea</h2>
+        
+      </a>
+    </div>
+    <div class="link-box violetti">
+      <a href="https://www.s-pankki.fi" target="_blank" rel="noopener">
+        <h2>S-Pankki</h2>
+              </a>
+    </div>
+    <div class="link-box violetti">
+      <a href="https://www.danskebank.fi" target="_blank" rel="noopener">
+        <h2>Danske Bank</h2>
+              </a>
+    </div>
+    <div class="link-box violetti">
+      <a href="https://www.handelsbanken.fi" target="_blank" rel="noopener">
+        <h2>Handelsbanken</h2>
+              </a>
+    </div>
+    <div class="link-box violetti">
+      <a href="https://www.poppankki.fi" target="_blank" rel="noopener">
+        <h2>POP Pankki</h2>
+             </a>
+    </div>
+    <div class="link-box violetti">
+      <a href="https://www.saastopankki.fi" target="_blank" rel="noopener">
+        <h2>Säästöpankki</h2>
+              </a>
+    </div>
+    <div class="link-box violetti">
+      <a href="https://www.omasp.fi/" target="_blank" rel="noopener">
+        <h2>Oma Säästöpankki</h2>
+              </a>
+    </div>
+    <div class="link-box violetti">
+      <a href="https://www.finanssiala.fi" target="_blank" rel="noopener">
+        <h2>Finanssiala</h2>
+        <p>Pankki- ja vakuutustoimialan turvallisuusinfo</p>
+      </a>
+    </div>
+    <div class="link-box violetti">
+      <a href="https://www.suomi.fi/palvelut/verkkoasiointitunnukset" target="_blank" rel="noopener">
+        <h2>Verkkopankkitunnukset ja tunnistautuminen</h2>
+        <p>Tietoa pankkitunnuksista ja vahvasta tunnistautumisesta</p>
+      </a>
+    </div>
+        <div style="text-align:center; margin-top:3em;">
+      <a href="index.html" class="nav-button" style="font-size:1.3em; padding:12px 24px; margin:auto; display:inline-block;">← Palaa etusivulle</a>
+    </div>
+  </main>
+  <footer>
+    <div style="background: #c9c9c9; color: #000; text-align: center; padding: 1em; margin-top: 2em;">
+      <img src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg" alt="SeniorSurf logo" style="height: 40px; vertical-align: middle;">
+      <span style="margin-left: 12px;">SeniorSurf &copy; 2025</span>
+    </div>
+  </footer>
 </body>
 </html>

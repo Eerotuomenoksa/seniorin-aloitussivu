@@ -1,65 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
-/* ---- Seniorin aloitussivun päävärit ja kategoriat ----
-  1. Violetti: Hyvinvointi ja arki (Terveys, Oikeus, Julkiset palvelut, Koti, Pankit)
-  2. Turkoosi: Liikkuminen ja ympäristö (Liikenne, Matkailu, Luonto, Sää)
-  3. Oranssi: Tieto, opiskelu ja tutkimus (Koulutus, Tiede, Sukututkimus, Historia, Kielet)
-  4. Sininen: Kulttuuri ja viihde (Kirjallisuus, Kirjastot, Musiikki, Viihde, Taiteet, Kulttuuri, Media)
-  5. Harmaa: Arjen palvelut ja vapaa-aika (Verkkokaupat, Vapaa-aika, Urheilu, Hengellisyys, Tekniikka)
--------------------------------------------------------- */
-
-:root {
-  --violetti: #330066;
-  --turkoosi: #4abdc9;
-  --oranssi: #f49638;
-  --sininen: #3B5BA7;
-  --harmaa: #c9c9c9;
+/* Yleisasetukset */
+body {
+  background: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
-.category-link.violetti, .link-box.violetti { background: var(--violetti); color: #fff; }
-.category-link.turkoosi, .link-box.turkoosi { background: var(--turkoosi); color: #fff; }
-.category-link.oranssi,  .link-box.oranssi  { background: var(--oranssi); color: #000; }
-.category-link.sininen,  .link-box.sininen  { background: var(--sininen); color: #fff; }
-.category-link.harmaa,   .link-box.harmaa   { background: var(--harmaa); color: #000; }
-
-.category-link, .link-box {
-  display: block;
-  min-width: 240px;
-  max-width: 330px;
-  padding: 18px 20px;
-  margin: 0.5em;
-  border-radius: 12px;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: left;
-  box-shadow: 0 2px 6px rgba(51,0,102,0.06);
-  text-decoration: none;
-  transition: filter 0.2s;
-}
-.category-link:hover, .link-box:hover {
-  filter: brightness(0.96);
-  text-decoration: none;
-}
-.link-box h2 {
-  margin: 0.4em 0 0.15em 0;
-  font-size: 1.16em;
-  font-weight: bold;
-}
-.link-box p {
-  margin: 0 0 0.1em 0;
-  font-size: 1em;
-}
-.link-box a, .link-box h2, .link-box p {
-  color: inherit;
-  text-decoration: none;
+/* Kontaineri */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2em 1em 1em 1em;
 }
 
-/* Header ja footer yleiset */
+/* Header-tyylit */
 .main-header {
   background: #330066;
   color: #fff;
   text-align: center;
   padding: 1.2em 0;
   position: relative;
+  font-size: 1em;
+}
+
+.main-header .material-symbols-outlined {
+  font-size: 2em;
+  vertical-align: middle;
 }
 
 .header-links {
@@ -77,7 +44,10 @@
   border-radius: 1.5em;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em;
   transition: background 0.2s;
+  border: none;
+  cursor: pointer;
 }
 .header-btn:hover,
 .header-btn:focus {
@@ -97,6 +67,9 @@
   position: absolute;
   left: 2em;
   top: 1.2em;
+  font-size: 1em;
+  transition: background 0.2s;
+  cursor: pointer;
 }
 .nav-button:hover,
 .nav-button:focus {
@@ -104,13 +77,78 @@
   color: #fff;
 }
 
-/* Footer yhtenäinen */
+/* Linkkilaatikot ja väriblokit */
+.link-box {
+  border-radius: 1.5em;
+  padding: 1.1em 1.2em 0.9em 1.2em;
+  margin: 1.3em 0;
+  box-shadow: 0 2px 16px 0 rgba(40,60,90,0.07);
+  transition: box-shadow 0.2s;
+}
+.link-box:hover {
+  box-shadow: 0 4px 32px 0 rgba(40,60,90,0.12);
+}
+
+.link-box a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.link-box h2 {
+  font-size: 1.15em;
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+  color: #000;
+}
+
+.link-box p {
+  font-size: 1em;
+  color: #222;
+  margin: 0;
+}
+
+/* Väriluokat */
+.sininen {
+  background: #330066;
+  color: #fff;
+}
+.sininen h2, .sininen p, .sininen a { color: #fff; }
+.oranssi {
+  background: #f49638;
+  color: #fff;
+}
+.oranssi h2, .oranssi p, .oranssi a { color: #fff; }
+.violetti {
+  background: #c9c9c9;
+  color: #000;
+}
+.violetti h2, .violetti p, .violetti a { color: #000; }
+.harmaa {
+  background: #eaeaea;
+  color: #000;
+}
+.harmaa h2, .harmaa p, .harmaa a { color: #000; }
+.turkoosi {
+  background: #4abdc9;
+  color: #fff;
+}
+.turkoosi h2, .turkoosi p, .turkoosi a { color: #fff; }
+
+/* Pienet korjaukset linkkilaatikoihin */
+.link-box a:hover h2,
+.link-box a:focus h2 {
+  text-decoration: underline;
+}
+
+/* Footer-tyylit */
 .site-footer {
   background: #c9c9c9;
   color: #000;
   text-align: center;
   padding: 1em;
   margin-top: 2em;
+  font-size: 1.05em;
 }
 .site-footer .footer-logo {
   height: 40px;
@@ -120,218 +158,34 @@
   margin-left: 12px;
 }
 
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #fff;
-  color: #000;
-}
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2em;
-  justify-content: center;
-}
-.material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-variation-settings:
-    'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-  vertical-align: middle;
-  margin-right: 0.5em;
-  font-size: 1.4em;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #000;
+/* Responsiivisuus */
+@media (max-width: 700px) {
+  .container {
+    padding: 1em 0.5em 1em 0.5em;
+  }
+  .main-header {
+    font-size: 0.92em;
+    padding: 0.7em 0;
+  }
+  .header-links {
+    right: 0.7em;
+    top: 0.7em;
+    gap: 0.6em;
+  }
+  .nav-button {
+    left: 0.7em;
+    top: 0.7em;
+    font-size: 0.97em;
+  }
+  .link-box {
+    padding: 0.95em 0.8em 0.7em 0.9em;
+    border-radius: 1.1em;
+  }
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2em;
-}
-.link-box, .link-box a, .link-box h2, .link-box p {
-  background-color: #c9c9c9 !important;
-  color: #000 !important;
-  text-decoration: none !important;
-}
-.link-box a:hover, .link-box:hover {
-  text-decoration: none !important;
-  background-color: #b3b3b3;
-  color: #000 !important;
-}
-.link-box h2 {
-  margin: 0.4em 0 0.2em 0;
-  font-size: 1.2em;
-}
-.link-box p {
-  margin: 0;
-  font-size: 0.95em;
-}
-
-.link-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2em;
-  justify-content: center;
-}
-
-.link-box {
-  width: 260px;
-  min-height: 120px;
-  background-color: #c9c9c9;
-  color: #000;
-  border-radius: 12px;
-  text-align: center;
-  padding: 15px;
-  box-sizing: border-box;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-
-.link-box:hover {
-  background-color: #b3b3b3;
-}
-
-.link-box small {
-  font-size: 0.85em;
-  color: #333;
-  margin-top: 8px;
-}
-
-.nav-button {
-  padding: 6px 12px;
-  border-radius: 8px;
-  background-color: #c9c9c9;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48;
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-  font-weight: normal;
-  font-display: block;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  white-space: nowrap;
-  direction: ltr;
-  user-select: none;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-}
-
-header {
-  background-color: #330066;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #c9c9c9;
-  color: #333;
-  font-size: 0.9em;
-}
-
-footer img {
-  height: 40px;
-  margin-top: 10px;
-}
-
-/* Etusivun ja alasivujen kategoriapainikkeet */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 30px 10px;
-}
-
-.category-link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 240px;
-  height: 100px;
-  margin: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 12px;
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-  transition: opacity 0.3s ease;
-}
-
-.category-link span {
-  font-size: 28px;
-}
-
-.category-link:nth-child(4n+1) { background-color: #f49638; }
-.category-link:nth-child(4n+2) { background-color: #4abdc9; }
-.category-link:nth-child(4n+3) { background-color: #c9c9c9; color: #000; }
-.category-link:nth-child(4n)   { background-color: #330066; }
-
-.category-link:hover {
-  opacity: 0.85;
-}
-
-/* Alasivujen linkkilaatikot */
-.link-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 30px 10px;
-}
-
-.link-box {
-  width: 260px;
-  min-height: 120px;
-  background-color: #f49638;
-  color: #000;
-  border-radius: 12px;
-  text-align: center;
-  padding: 15px;
-  box-sizing: border-box;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.link-box:hover {
-  opacity: 0.9;
-}
-
-.link-box small {
-  font-size: 0.85em;
-  color: #000;
-  margin-top: 8px;
+/* Ruudunlukijaystävällisyys ja painikkeiden korostus */
+.header-btn:focus,
+.nav-button:focus {
+  outline: 3px solid #f49638;
+  outline-offset: 2px;
 }

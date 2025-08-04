@@ -17,22 +17,40 @@
   <div class="container">
     <div id="paivainfo"></div>
 <script>
-  // Viikonpäivät suomeksi
-  const paivat = [
-    "sunnuntai", "maanantai", "tiistai", "keskiviikko",
-    "torstai", "perjantai", "lauantai"
-  ];
-  // Nimipäivät ja liputuspäivät
-  <script>
-function naytaPaiva() {
+const paivat = [
+  "sunnuntai", "maanantai", "tiistai", "keskiviikko",
+  "torstai", "perjantai", "lauantai"
+];
+
+function naytaPaivaJaNimet() {
   const nyt = new Date();
+  const viikonpaiva = paivat[nyt.getDay()];
   const pv = nyt.getDate();
   const kk = nyt.getMonth() + 1;
   const v = nyt.getFullYear();
-  document.getElementById('paivainfo').textContent = `Tänään on ${pv}.${kk}.${v}`;
+  const h = nyt.getHours().toString().padStart(2,"0");
+  const min = nyt.getMinutes().toString().padStart(2,"0");
+  const paivamaara = `Tänään on ${viikonpaiva} ${pv}.${kk}.${v} ${h}:${min}`;
+
+  // Nimipäivä rajapinta
+  fetch(`https://nimipaivat.fi/api/${v}/${kk}/${pv}`)
+    .then(r => r.json())
+    .then(data => {
+      let nimet = (data.fi && data.fi.length)
+        ? `Nimipäivät: ${data.fi.join(", ")}`
+        : "";
+      document.getElementById('paivainfo').innerHTML =
+        nimet ? `${paivamaara}<br>${nimet}` : paivamaara;
+    })
+    .catch(() => {
+      document.getElementById('paivainfo').textContent = paivamaara;
+    });
 }
-naytaPaiva();
+naytaPaivaJaNimet();
+setInterval(naytaPaivaJaNimet, 30000);
 </script>
+
+
 
     
     <div class="link-box harmaa">

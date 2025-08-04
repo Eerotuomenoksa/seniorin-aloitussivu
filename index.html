@@ -17,6 +17,7 @@
   <span style="font-size:2em; vertical-align:middle; margin-left:0.3em;">Seniorin aloitussivu</span>
 </header>
 
+<div id="paivainfo"></div>
 
   <div class="container">
 
@@ -103,6 +104,43 @@
   <img src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg" alt="SeniorSurf logo" class="footer-logo">
   <span class="footer-text">SeniorSurf &copy; 2025</span>
 </footer>
+<script>
+// Viikonpäivät suomeksi
+const paivat = [
+  "sunnuntai", "maanantai", "tiistai", "keskiviikko",
+  "torstai", "perjantai", "lauantai"
+];
+
+// Palvelu: nimipaivat.fi tarjoaa ilmaisen json-rajapinnan
+function naytaPaivainfo() {
+  const nyt = new Date();
+  const viikonpaiva = paivat[nyt.getDay()];
+  const pv = nyt.getDate();
+  const kk = nyt.getMonth() + 1;
+  const v = nyt.getFullYear();
+  const h = nyt.getHours().toString().padStart(2,"0");
+  const min = nyt.getMinutes().toString().padStart(2,"0");
+  const paivamaara = `${viikonpaiva} ${pv}.${kk}.${v} ${h}:${min}`;
+
+  // Hae nimipäivät ja liputuspäivät suoraan rajapinnasta
+  fetch(`https://nimipaivat.fi/api/${v}/${kk}/${pv}`)
+    .then(r => r.json())
+    .then(data => {
+      let html = `<strong>${paivamaara}</strong>`;
+      // Nimipäivät (voi olla monta nimeä)
+      if (data.fi && data.fi.length) {
+        html += ` <br> Nimipäivät: <span style="font-weight:600;">${data.fi.join(", ")}</span>`;
+      }
+      // Liputuspäivä
+      if (data.flagday && data.flagday.length) {
+        html += `<br> <span style="color:#330066; font-weight:600;">&#x1F1EE;&#x1F1F9; Liputuspäivä: ${data.flagday[0]}</span>`;
+      }
+      document.getElementById('paivainfo').innerHTML = html;
+    });
+}
+naytaPaivainfo();
+setInterval(naytaPaivainfo, 30000); // päivitys 30 sek välein
+</script>
 
 </body>
 </html>

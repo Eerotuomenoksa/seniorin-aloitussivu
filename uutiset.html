@@ -1,74 +1,87 @@
-
 <!DOCTYPE html>
-
 <html lang="fi">
 <head>
-<link href="styles.css" rel="stylesheet"/>
-<meta charset="utf-8"/>
-<title>Uutiset</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <title>Uutiset</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body><div class="top-buttons" style="position: absolute; top: 15px; left: 20px; right: 20px; display: flex; justify-content: space-between;"><a class="nav-button" href="index.html">← Palaa etusivulle</a><div style="display: flex; gap: 0.75em;"><a class="nav-button" href="info.html">Info</a><a class="nav-button" href="aloitussivu.html">Tee aloitussivuksi</a></div></div>
-<header>
-<div style="text-align:center; margin-bottom: 10px;">
-<a href="index.html" style="display:inline-block; background-color:#330066; color:#fff; padding:10px 20px; text-decoration:none; border-radius:8px; font-weight:bold;">
-      ← Palaa etusivulle
-    </a>
-</div>
-<h1><span aria-hidden="true" class="material-symbols-outlined">newspaper</span>Uutiset</h1>
-</header>
-<div class="container">
-<div class="link-grid">
-<a class="link-box" href="https://yle.fi" rel="noopener" target="_blank">
-<div>Yle Uutiset</div>
-<small>Luotettava ja puolueeton julkisen palvelun uutismedia.</small>
-</a>
-<a class="link-box" href="https://www.hs.fi" rel="noopener" target="_blank">
-<div>Helsingin Sanomat</div>
-<small>Suomen suurin sanomalehti.</small>
-</a>
-<a class="link-box" href="https://www.iltalehti.fi" rel="noopener" target="_blank">
-<div>Iltalehti</div>
-<small>Uutisia, viihdettä ja urheilua.</small>
-</a>
-<a class="link-box" href="https://www.is.fi" rel="noopener" target="_blank">
-<div>Ilta-Sanomat</div>
-<small>Nopeita uutisia ja ajankohtaisia puheenaiheita.</small>
-</a>
-<a class="link-box" href="https://www.mtvuutiset.fi" rel="noopener" target="_blank">
-<div>MTV Uutiset</div>
-<small>Kotimaan ja ulkomaan uutiset sekä sää.</small>
-</a>
-<a class="link-box" href="https://www.uutissuomalainen.fi" rel="noopener" target="_blank">
-<div>Uutissuomalainen</div>
-<small>Yhteisverkko useiden paikallislehtien uutisille.</small>
-</a>
-<a class="link-box" href="https://www.stt.fi" rel="noopener" target="_blank">
-<div>STT – Suomen Tietotoimisto</div>
-<small>Uutistoimisto ja journalistinen taustasisältö.</small>
-</a>
-<a class="link-box" href="https://media.sanoma.fi" rel="noopener" target="_blank">
-<div>Sanoman paikallismediat</div>
-<small>Alueelliset sanomalehdet eri puolilta Suomea.</small>
-</a>
-<a class="link-box" href="https://www.bbc.com/news" rel="noopener" target="_blank">
-<div>BBC News</div>
-<small>Kansainvälinen ja arvostettu uutistoimisto (englanniksi).</small>
-</a>
-<a class="link-box" href="https://www.faktabaari.fi" rel="noopener" target="_blank">
-<div>Faktabaari</div>
-<small>Faktantarkistus ja medialukutaidon edistäminen.</small>
-</a>
-</div>
-</div>
-<div style="text-align:center; margin: 30px;">
-<a href="index.html" style="display:inline-block; background-color:#330066; color:#fff; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:bold;">
-    ← Takaisin etusivulle
-  </a>
-</div>
-<footer>
-<p>© 2025 SeniorSurf</p>
-<img alt="SeniorSurf logo" src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg"/>
-</footer>
+<body>
+  <header style="background: #330066; color: #fff; position: relative; text-align: center; padding: 1.2em 0;">
+    <a href="index.html" class="nav-button" style="position:absolute; left:2em; top:1.2em;">← Palaa etusivulle</a>
+    <span class="material-symbols-outlined" aria-hidden="true" style="font-size:2em;vertical-align:middle;">newspaper</span>
+    <span style="font-size:2em; vertical-align:middle; margin-left:0.3em;">Uutiset</span>
+  </header>
+  <main class="container">
+    <div class="link-box sininen">
+      <a href="https://yle.fi/uutiset" target="_blank" rel="noopener">
+        <h2>Yle Uutiset</h2>
+        <p>Luotettavat kotimaan ja ulkomaan uutiset</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.hs.fi" target="_blank" rel="noopener">
+        <h2>Helsingin Sanomat</h2>
+        <p>Suomen suurin sanomalehti ja verkkouutiset</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.mtvuutiset.fi/" target="_blank" rel="noopener">
+        <h2>MTV Uutiset</h2>
+        <p>Ajankohtaiset uutiset ja videot</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.is.fi" target="_blank" rel="noopener">
+        <h2>Ilta-Sanomat</h2>
+        <p>Ajankohtaiset ja nopeat uutiset</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.aamulehti.fi" target="_blank" rel="noopener">
+        <h2>Aamulehti</h2>
+        <p>Tampereen ja Pirkanmaan alueen uutiset</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.kaleva.fi" target="_blank" rel="noopener">
+        <h2>Kaleva</h2>
+        <p>Pohjois-Suomen uutisia</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.keskisuomalainen.fi" target="_blank" rel="noopener">
+        <h2>Keskisuomalainen</h2>
+        <p>Jyväskylän ja Keski-Suomen alueen uutiset</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.satakunnankansa.fi" target="_blank" rel="noopener">
+        <h2>Satakunnan Kansa</h2>
+        <p>Länsi-Suomen uutiset</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.uusisuomi.fi/" target="_blank" rel="noopener">
+        <h2>Uusi Suomi</h2>
+        <p>Verkkouutisia ja ajankohtaista keskustelua</p>
+      </a>
+    </div>
+    <div class="link-box sininen">
+      <a href="https://www.sanomalehdet.fi/" target="_blank" rel="noopener">
+        <h2>Sanomalehdet.fi</h2>
+        <p>Suomalaisten lehtien yhteishaku</p>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:3em;">
+      <a href="index.html" class="nav-button" style="font-size:1.3em; padding:12px 24px; margin:auto; display:inline-block;">← Palaa etusivulle</a>
+    </div>
+  </main>
+  <footer>
+    <div style="background: #c9c9c9; color: #000; text-align: center; padding: 1em; margin-top: 2em;">
+      <img src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg" alt="SeniorSurf logo" style="height: 40px; vertical-align: middle;">
+      <span style="margin-left: 12px;">SeniorSurf &copy; 2025</span>
+    </div>
+  </footer>
 </body>
 </html>

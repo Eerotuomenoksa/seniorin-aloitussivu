@@ -33,7 +33,7 @@ function naytaPaivaJaNimet() {
   const paivamaara = `Tänään on ${viikonpaiva} ${pv}.${kk}.${v} ${h}:${min}`;
 
   // Nimipäivä rajapinta
-  fetch(`https://nimipaivat.fi/${pv}.${kk}.`)
+  fetch(`https://nimipaivat.fi/api/${v}/${kk}/${pv}`)
     .then(r => r.json())
     .then(data => {
       let nimet = (data.fi && data.fi.length)

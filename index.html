@@ -17,26 +17,51 @@
   <div class="container">
     <div id="paivainfo"></div>
 <div id="paivainfo"></div>
+<div id="paivainfo"></div>
 <script>
 const paivat = [
   "sunnuntai", "maanantai", "tiistai", "keskiviikko",
   "torstai", "perjantai", "lauantai"
 ];
+const kuukaudet = [
+  "tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta",
+  "toukokuuta", "kesäkuuta", "heinäkuuta", "elokuuta",
+  "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"
+];
+
+function getWeekNumber(date) {
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+  return Math.ceil((((d - yearStart) / 86400000) + 1)/7);
+}
+
+function getTervehdys(tunti) {
+  if (tunti < 6) return "Hyvää yötä!";
+  if (tunti < 11) return "Hyvää huomenta!";
+  if (tunti < 17) return "Hyvää päivää!";
+  if (tunti < 22) return "Hyvää iltaa!";
+  return "Hyvää yötä!";
+}
 
 function naytaPaiva() {
   const nyt = new Date();
   const viikonpaiva = paivat[nyt.getDay()];
   const pv = nyt.getDate();
-  const kk = nyt.getMonth() + 1;
+  const kk = nyt.getMonth();
   const v = nyt.getFullYear();
-  const h = nyt.getHours().toString().padStart(2,"0");
+  const h = nyt.getHours();
   const min = nyt.getMinutes().toString().padStart(2,"0");
+  const viikkonumero = getWeekNumber(nyt);
+  const tervehdys = getTervehdys(h);
   document.getElementById('paivainfo').textContent =
-    `Tänään on ${viikonpaiva} ${pv}.${kk}.${v} ${h}:${min}`;
+    `${tervehdys} Tänään on ${viikonpaiva} ${pv}. ${kuukaudet[kk]} ${v} ${h.toString().padStart(2,"0")}:${min} (viikko ${viikkonumero})`;
 }
 naytaPaiva();
-setInterval(naytaPaiva, 30000); // Päivitä 30 sek välein
+setInterval(naytaPaiva, 30000);
 </script>
+
 
 
 

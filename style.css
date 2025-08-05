@@ -23,12 +23,10 @@ body {
   position: relative;
   font-size: 1em;
 }
-
 .main-header .material-symbols-outlined {
   font-size: 2em;
   vertical-align: middle;
 }
-
 .header-links {
   position: absolute;
   right: 2em;
@@ -36,7 +34,6 @@ body {
   display: flex;
   gap: 1em;
 }
-
 .header-btn {
   background: #4abdc9;
   color: #fff;
@@ -54,8 +51,6 @@ body {
   background: #f49638;
   color: #fff;
 }
-
-/* Headerissa oleva nav-button */
 .nav-button {
   background: #c9c9c9;
   color: #330066;
@@ -77,7 +72,7 @@ body {
   color: #fff;
 }
 
-/* Alaosan keskitetty paluu-nappi */
+/* Alaosan paluu-nappi */
 .main-back-btn-row {
   text-align: center;
   margin-top: 3em;
@@ -102,7 +97,6 @@ body {
   color: #fff;
 }
 
-
 /* Linkkilaatikot ja väriblokit */
 .link-box {
   border-radius: 1.5em;
@@ -110,28 +104,34 @@ body {
   margin: 1.3em 0;
   box-shadow: 0 2px 16px 0 rgba(40,60,90,0.07);
   transition: box-shadow 0.2s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .link-box:hover {
   box-shadow: 0 4px 32px 0 rgba(40,60,90,0.12);
 }
-
 .link-box a {
   text-decoration: none;
   color: #000;
   display: block;
 }
-
-.link-box h2 {
+.link-box h2, .link-box h3 {
   font-size: 1.15em;
   font-weight: 700;
-  margin: 0 0 0.3em 0;
+  margin: 0.3em 0 0.3em 0;
   color: #000;
 }
-
 .link-box p {
   font-size: 1em;
   color: #222;
   margin: 0;
+}
+.link-box span.material-symbols-outlined {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
 }
 
 /* Väriluokat */
@@ -139,35 +139,39 @@ body {
   background: #330066;
   color: #fff;
 }
-.sininen h2, .sininen p, .sininen a { color: #fff; }
+.sininen h2, .sininen h3, .sininen p, .sininen a { color: #fff; }
+
 .oranssi {
   background: #f49638;
   color: #fff;
 }
-.oranssi h2, .oranssi p, .oranssi a { color: #fff; }
+.oranssi h2, .oranssi h3, .oranssi p, .oranssi a { color: #fff; }
+
 .violetti {
   background: #c9c9c9;
   color: #000;
 }
-.violetti h2, .violetti p, .violetti a { color: #000; }
+.violetti h2, .violetti h3, .violetti p, .violetti a { color: #000; }
+
 .harmaa {
   background: #eaeaea;
   color: #000;
 }
-.harmaa h2, .harmaa p, .harmaa a { color: #000; }
+.harmaa h2, .harmaa h3, .harmaa p, .harmaa a { color: #000; }
+
 .turkoosi {
   background: #4abdc9;
   color: #fff;
 }
-.turkoosi h2, .turkoosi p, .turkoosi a { color: #fff; }
+.turkoosi h2, .turkoosi h3, .turkoosi p, .turkoosi a { color: #fff; }
 
-/* Pienet korjaukset linkkilaatikoihin */
+/* Pienet korjaukset */
 .link-box a:hover h2,
 .link-box a:focus h2 {
   text-decoration: underline;
 }
 
-/* Footer-tyylit */
+/* Footer */
 .site-footer {
   background: #c9c9c9;
   color: #000;
@@ -207,9 +211,31 @@ body {
     padding: 0.95em 0.8em 0.7em 0.9em;
     border-radius: 1.1em;
   }
+  .link-box p {
+    display: block;
+  }
 }
 
-/* Ruudunlukijaystävällisyys ja painikkeiden korostus */
+/* Suurempi näyttö – matriisi ja kuvaus hoverilla */
+@media (min-width: 701px) {
+  .link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5em;
+  }
+  .link-box p {
+    display: none;
+  }
+  .link-box:hover p {
+    display: block;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.4em 0.6em;
+    margin-top: 0.4em;
+    border-radius: 0.4em;
+  }
+}
+
+/* Saavutettavuus */
 .header-btn:focus,
 .nav-button:focus {
   outline: 3px solid #f49638;

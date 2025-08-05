@@ -7,60 +7,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
-  <header class="main-header">
+  <header class="main-header" role="banner">
     <div class="header-links">
       <a href="info.html" class="header-btn">Info</a>
       <a href="tee-aloitussivuksi.html" class="header-btn">Tee aloitussivuksi</a>
     </div>
     <span style="font-size:2em; vertical-align:middle; margin-left:0.3em;">Seniorin aloitussivu</span>
   </header>
-  <div class="container">
-    <div id="paivainfo"></div>
-<div id="paivainfo"></div>
-<div id="paivainfo"></div>
-<script>
-const paivat = [
-  "sunnuntai", "maanantai", "tiistai", "keskiviikko",
-  "torstai", "perjantai", "lauantai"
-];
-const kuukaudet = [
-  "tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta",
-  "toukokuuta", "kesäkuuta", "heinäkuuta", "elokuuta",
-  "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"
-];
+  <main class="container" role="main">
+    <section aria-labelledby="tervetuloa-otsikko">
+      <h1 id="tervetuloa-otsikko">Tervetuloa!</h1>
+      <p>Tämä sivusto on suunniteltu erityisesti sinulle, joka haluat käyttää nettiä helposti ja turvallisesti. Löydät täältä linkkejä luotettaviin palveluihin eri aihepiireistä, kuten terveys, liikkuminen, kulttuuri ja asiointi.</p>
+      <p><strong>Huom!</strong> Tämä sivu on vielä testivaiheessa. Linkkejä ja sisältöjä kehitetään jatkuvasti. Jos huomaat virheitä tai haluat antaa palautetta, kerrothan siitä meille.</p>
+    </section>
 
-function getWeekNumber(date) {
-  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-  const dayNum = d.getUTCDay() || 7;
-  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
-  const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
-  return Math.ceil((((d - yearStart) / 86400000) + 1)/7);
-}
+    <div id="paivainfo" aria-live="polite"></div>
+    <script>
+    const paivat = ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"];
+    const kuukaudet = ["tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kesäkuuta", "heinäkuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"];
+    function getWeekNumber(date) {
+      const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+      const dayNum = d.getUTCDay() || 7;
+      d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+      const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+      return Math.ceil((((d - yearStart) / 86400000) + 1)/7);
+    }
+    function getTervehdys(tunti) {
+      if (tunti < 6) return "Hyvää yötä!";
+      if (tunti < 11) return "Hyvää huomenta!";
+      if (tunti < 17) return "Hyvää päivää!";
+      if (tunti < 22) return "Hyvää iltaa!";
+      return "Hyvää yötä!";
+    }
+    function naytaPaiva() {
+      const nyt = new Date();
+      const viikonpaiva = paivat[nyt.getDay()];
+      const pv = nyt.getDate();
+      const kk = nyt.getMonth();
+      const v = nyt.getFullYear();
+      const h = nyt.getHours();
+      const min = nyt.getMinutes().toString().padStart(2,"0");
+      const viikkonumero = getWeekNumber(nyt);
+      const tervehdys = getTervehdys(h);
+      document.getElementById('paivainfo').textContent =
+        `${tervehdys} Tänään on ${viikonpaiva} ${pv}. ${kuukaudet[kk]} ${v} ${h.toString().padStart(2,"0")}:${min} (viikko ${viikkonumero})`;
+    }
+    naytaPaiva();
+    setInterval(naytaPaiva, 30000);
+    </script>
 
-function getTervehdys(tunti) {
-  if (tunti < 6) return "Hyvää yötä!";
-  if (tunti < 11) return "Hyvää huomenta!";
-  if (tunti < 17) return "Hyvää päivää!";
-  if (tunti < 22) return "Hyvää iltaa!";
-  return "Hyvää yötä!";
-}
-
-function naytaPaiva() {
-  const nyt = new Date();
-  const viikonpaiva = paivat[nyt.getDay()];
-  const pv = nyt.getDate();
-  const kk = nyt.getMonth();
-  const v = nyt.getFullYear();
-  const h = nyt.getHours();
-  const min = nyt.getMinutes().toString().padStart(2,"0");
-  const viikkonumero = getWeekNumber(nyt);
-  const tervehdys = getTervehdys(h);
-  document.getElementById('paivainfo').textContent =
-    `${tervehdys} Tänään on ${viikonpaiva} ${pv}. ${kuukaudet[kk]} ${v} ${h.toString().padStart(2,"0")}:${min} (viikko ${viikkonumero})`;
-}
-naytaPaiva();
-setInterval(naytaPaiva, 30000);
-</script>
 
 
 
@@ -173,13 +168,13 @@ setInterval(naytaPaiva, 30000);
         <p>Pankkipalvelut ja tunnistautuminen</p>
       </a>
     </div>
-  </div class="link-box sininen">
-    <a href="ruoka.html">
-  <span class="material-symbols-outlined" aria-hidden="true">restaurant</span>
- <h2>Ruoka</h2>
- <p>Reseptit ja ruokakaupat</p>
-</a>
-</di
+    </div class="link-box sininen">
+      <a href="ruoka.html">
+        <span class="material-symbols-outlined">restaurant</span>
+        <h2>Ruoka</h2>
+        <p>Reseptit ja ruokakaupat</p>
+      </a>
+    </div>
     <div class="link-box oranssi">
       <a href="sukututkimus.html">
         <span class="material-symbols-outlined">family_restroom</span>
@@ -251,10 +246,10 @@ setInterval(naytaPaiva, 30000);
       </a>
     </div>
   </div>
-  <footer class="site-footer">
+  </main>
+  <footer class="site-footer" role="contentinfo">
     <img src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg" alt="SeniorSurf logo" class="footer-logo">
     <span class="footer-text">SeniorSurf &copy; 2025</span>
   </footer>
-  
 </body>
 </html>

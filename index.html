@@ -32,23 +32,29 @@ function naytaPaivaJaNimet() {
   const min = nyt.getMinutes().toString().padStart(2,"0");
   const paivamaara = `Tänään on ${viikonpaiva} ${pv}.${kk}.${v} ${h}:${min}`;
 
-  // Nimipäivä rajapinta
   fetch(`https://nimipaivat.fi/api/${v}/${kk}/${pv}`)
-    .then(r => r.json())
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP error! status: ${r.status}`);
+      return r.json();
+    })
     .then(data => {
       let nimet = (data.fi && data.fi.length)
         ? `Nimipäivät: ${data.fi.join(", ")}`
-        : "";
+        : "(ei nimipäivää)";
       document.getElementById('paivainfo').innerHTML =
         nimet ? `${paivamaara}<br>${nimet}` : paivamaara;
     })
-    .catch(() => {
-      document.getElementById('paivainfo').textContent = paivamaara;
+    .catch(e => {
+      document.getElementById('paivainfo').innerHTML =
+        `${paivamaara}<br><span style="color:red;font-size:0.95em">Nimipäiviä ei voitu hakea (${e.message})</span>`;
+      // Tulosta myös konsoliin
+      console.warn('Nimipäivä-API-virhe:', e);
     });
 }
 naytaPaivaJaNimet();
 setInterval(naytaPaivaJaNimet, 30000);
 </script>
+
 
 
 

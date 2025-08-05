@@ -2,250 +2,95 @@
 <html lang="fi">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Seniorin aloitussivu</title>
+  <link rel="stylesheet" href="responsive.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
   <header class="main-header" role="banner">
-    <div class="header-links">
+    <nav aria-label="Päänavigaatio" class="header-links">
       <a href="info.html" class="header-btn">Info</a>
       <a href="tee-aloitussivuksi.html" class="header-btn">Tee aloitussivuksi</a>
-    </div>
-    <span style="font-size:2em; vertical-align:middle; margin-left:0.3em;">Seniorin aloitussivu</span>
+    </nav>
+    <h1 style="font-size:2em; margin: 0.3em 0 0 0;">Seniorin aloitussivu</h1>
   </header>
   <main class="container" role="main">
-    <section aria-labelledby="tervetuloa-otsikko">
-      <h1 id="tervetuloa-otsikko">Tervetuloa!</h1>
-      <p>Tämä sivusto on suunniteltu erityisesti sinulle, joka haluat käyttää nettiä helposti ja turvallisesti. Löydät täältä linkkejä luotettaviin palveluihin eri aihepiireistä, kuten terveys, liikkuminen, kulttuuri ja asiointi.</p>
-      <p><strong>Huom!</strong> Tämä sivu on vielä testivaiheessa. Linkkejä ja sisältöjä kehitetään jatkuvasti. Jos huomaat virheitä tai haluat antaa palautetta, kerrothan siitä meille.</p>
+    <section aria-labelledby="paivainfo-otsikko">
+      <h2 id="paivainfo-otsikko"></h2>
+      <div id="paivainfo" aria-live="polite">Tänään on...</div>
     </section>
 
-    <div id="paivainfo" aria-live="polite"></div>
+    <section aria-labelledby="linkit-otsikko">
+      <h2 id="linkit-otsikko">Aihealueittaiset linkit</h2>
+      <div class="link-grid">
+        <div class="link-box harmaa"><a href="hengellisyys.html"><span class="material-symbols-outlined">church</span><h3>Hengellisyys</h3><p>Suomalaisten kirkkojen ja yhteisöjen palvelut</p></a></div>
+        <div class="link-box oranssi"><a href="historia.html"><span class="material-symbols-outlined">history_edu</span><h3>Historia</h3><p>Suomen historian ja tutkimuksen sivut</p></a></div>
+        <div class="link-box violetti"><a href="julkiset-palvelut.html"><span class="material-symbols-outlined">account_balance</span><h3>Julkiset palvelut</h3><p>Valtion ja kuntien asiointi- ja neuvontasivut</p></a></div>
+        <div class="link-box turkoosi"><a href="kielet.html"><span class="material-symbols-outlined">language</span><h3>Kielet</h3><p>Kielten oppiminen, sanakirjat ja käännökset</p></a></div>
+        <div class="link-box sininen"><a href="kirjallisuus.html"><span class="material-symbols-outlined">menu_book</span><h3>Kirjallisuus</h3><p>Kirjat, e-kirjat ja kirjallisuuspalvelut</p></a></div>
+        <div class="link-box sininen"><a href="kirjastot.html"><span class="material-symbols-outlined">local_library</span><h3>Kirjastot</h3><p>Kirjastohaku ja palvelut Suomessa</p></a></div>
+        <div class="link-box violetti"><a href="koti.html"><span class="material-symbols-outlined">home</span><h3>Koti</h3><p>Asuminen, vuokraus ja kodinhoito</p></a></div>
+        <div class="link-box sininen"><a href="kulttuuri.html"><span class="material-symbols-outlined">theater_comedy</span><h3>Kulttuuri</h3><p>Kulttuuriuutiset ja tapahtumat</p></a></div>
+        <div class="link-box turkoosi"><a href="liikenne.html"><span class="material-symbols-outlined">directions_bus</span><h3>Liikenne</h3><p>Julkinen liikenne, aikataulut, matkustaminen</p></a></div>
+        <div class="link-box turkoosi"><a href="luonto.html"><span class="material-symbols-outlined">park</span><h3>Luonto</h3><p>Luontoharrastus, retkeily ja ympäristöpalvelut</p></a></div>
+        <div class="link-box sininen"><a href="media.html"><span class="material-symbols-outlined">satellite_alt</span><h3>Media</h3><p>TV, radio, podcastit ja mediatalot</p></a></div>
+        <div class="link-box turkoosi"><a href="matkailu.html"><span class="material-symbols-outlined">flight</span><h3>Matkailu</h3><p>Matkakohteet, varaussivut ja majoitus</p></a></div>
+        <div class="link-box sininen"><a href="musiikki.html"><span class="material-symbols-outlined">music_note</span><h3>Musiikki</h3><p>Kuuntele musiikkia ja radioita verkossa</p></a></div>
+        <div class="link-box violetti"><a href="oikeus.html"><span class="material-symbols-outlined">gavel</span><h3>Oikeus</h3><p>Laki, oikeusapupalvelut ja neuvonta</p></a></div>
+        <div class="link-box violetti"><a href="pankit.html"><span class="material-symbols-outlined">account_balance_wallet</span><h3>Pankit</h3><p>Pankkipalvelut ja tunnistautuminen</p></a></div>
+        <div class="link-box sininen"><a href="ruoka.html"><span class="material-symbols-outlined">restaurant</span><h3>Ruoka</h3><p>Reseptit ja ruokakaupat</p></a></div>
+        <div class="link-box oranssi"><a href="sukututkimus.html"><span class="material-symbols-outlined">family_restroom</span><h3>Sukututkimus</h3><p>Sukuseurat ja tutkimustyökalut</p></a></div>
+        <div class="link-box turkoosi"><a href="sää.html"><span class="material-symbols-outlined">cloud</span><h3>Sää</h3><p>Säätiedot ja sääpalvelut</p></a></div>
+        <div class="link-box sininen"><a href="taiteet.html"><span class="material-symbols-outlined">palette</span><h3>Taiteet</h3><p>Taidemuseot, näyttelyt ja galleriat</p></a></div>
+        <div class="link-box oranssi"><a href="tiede.html"><span class="material-symbols-outlined">science</span><h3>Tiede</h3><p>Tieteelliset uutiset, tapahtumat ja julkaisut</p></a></div>
+        <div class="link-box violetti"><a href="terveys.html"><span class="material-symbols-outlined">health_and_safety</span><h3>Terveys</h3><p>Neuvonta, hyvinvointi ja terveyspalvelut</p></a></div>
+        <div class="link-box harmaa"><a href="tekniikka.html"><span class="material-symbols-outlined">precision_manufacturing</span><h3>Tekniikka</h3><p>Tekniikka, digituki ja kodinelektroniikka</p></a></div>
+        <div class="link-box harmaa"><a href="urheilu.html"><span class="material-symbols-outlined">sports_soccer</span><h3>Urheilu</h3><p>Uutiset, tulokset ja lajiliitot</p></a></div>
+        <div class="link-box harmaa"><a href="vapaa-aika.html"><span class="material-symbols-outlined">sports_esports</span><h3>Vapaa-aika</h3><p>Harrastukset ja ajanvietto</p></a></div>
+        <div class="link-box sininen"><a href="viihde.html"><span class="material-symbols-outlined">movie</span><h3>Viihde</h3><p>Elokuvat, sarjat ja pelipalvelut</p></a></div>
+        <div class="link-box harmaa"><a href="verkkokaupat.html"><span class="material-symbols-outlined">shopping_cart</span><h3>Verkkokaupat</h3><p>Suosituimmat kotimaiset verkkokaupat</p></a></div>
+      </div>
+    </section>
+
     <script>
-    const paivat = ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"];
-    const kuukaudet = ["tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kesäkuuta", "heinäkuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"];
-    function getWeekNumber(date) {
-      const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-      const dayNum = d.getUTCDay() || 7;
-      d.setUTCDate(d.getUTCDate() + 4 - dayNum);
-      const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
-      return Math.ceil((((d - yearStart) / 86400000) + 1)/7);
-    }
-    function getTervehdys(tunti) {
-      if (tunti < 6) return "Hyvää yötä!";
-      if (tunti < 11) return "Hyvää huomenta!";
-      if (tunti < 17) return "Hyvää päivää!";
-      if (tunti < 22) return "Hyvää iltaa!";
-      return "Hyvää yötä!";
-    }
-    function naytaPaiva() {
-      const nyt = new Date();
-      const viikonpaiva = paivat[nyt.getDay()];
-      const pv = nyt.getDate();
-      const kk = nyt.getMonth();
-      const v = nyt.getFullYear();
-      const h = nyt.getHours();
-      const min = nyt.getMinutes().toString().padStart(2,"0");
-      const viikkonumero = getWeekNumber(nyt);
-      const tervehdys = getTervehdys(h);
-      document.getElementById('paivainfo').textContent =
-        `${tervehdys} Tänään on ${viikonpaiva} ${pv}. ${kuukaudet[kk]} ${v} ${h.toString().padStart(2,"0")}:${min} (viikko ${viikkonumero})`;
-    }
-    naytaPaiva();
-    setInterval(naytaPaiva, 30000);
-    </script>
+  const paivat = ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"];
+  const kuukaudet = ["tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kesäkuuta", "heinäkuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"];
 
+  function getWeekNumber(date) {
+    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    const dayNum = d.getUTCDay() || 7;
+    d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+    return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+  }
 
+  function getTervehdys(tunti) {
+    if (tunti < 6) return "Hyvää yötä!";
+    if (tunti < 11) return "Hyvää huomenta!";
+    if (tunti < 17) return "Hyvää päivää!";
+    if (tunti < 22) return "Hyvää iltaa!";
+    return "Hyvää yötä!";
+  }
 
+  function naytaPaiva() {
+    const nyt = new Date();
+    const viikonpaiva = paivat[nyt.getDay()];
+    const pv = nyt.getDate();
+    const kk = nyt.getMonth();
+    const v = nyt.getFullYear();
+    const h = nyt.getHours();
+    const min = nyt.getMinutes().toString().padStart(2, "0");
+    const viikkonumero = getWeekNumber(nyt);
+    const tervehdys = getTervehdys(h);
+    document.getElementById('paivainfo-otsikko').textContent = tervehdys;
+    document.getElementById('paivainfo').textContent = `Tänään on ${viikonpaiva} ${pv}. ${kuukaudet[kk]} ${v} ${h.toString().padStart(2, "0")}:${min} (viikko ${viikkonumero})`;
+  }
 
-
-
-
-    
-    <div class="link-box harmaa">
-      <a href="hengellisyys.html">
-        <span class="material-symbols-outlined">church</span>
-        <h2>Hengellisyys</h2>
-        <p>Suomalaisten kirkkojen ja yhteisöjen palvelut</p>
-      </a>
-    </div>
-    <div class="link-box oranssi">
-      <a href="historia.html">
-        <span class="material-symbols-outlined">history_edu</span>
-        <h2>Historia</h2>
-        <p>Suomen historian ja tutkimuksen sivut</p>
-      </a>
-    </div>
-    <div class="link-box violetti">
-      <a href="julkiset-palvelut.html">
-        <span class="material-symbols-outlined">account_balance</span>
-        <h2>Julkiset palvelut</h2>
-        <p>Valtion ja kuntien asiointi- ja neuvontasivut</p>
-      </a>
-    </div>
-    <div class="link-box turkoosi">
-      <a href="kielet.html">
-        <span class="material-symbols-outlined">language</span>
-        <h2>Kielet</h2>
-        <p>Kielten oppiminen, sanakirjat ja käännökset</p>
-      </a>
-    </div>
-    <div class="link-box sininen">
-      <a href="kirjallisuus.html">
-        <span class="material-symbols-outlined">menu_book</span>
-        <h2>Kirjallisuus</h2>
-        <p>Kirjat, e-kirjat ja kirjallisuuspalvelut</p>
-      </a>
-    </div>
-    <div class="link-box sininen">
-      <a href="kirjastot.html">
-        <span class="material-symbols-outlined">local_library</span>
-        <h2>Kirjastot</h2>
-        <p>Kirjastohaku ja palvelut Suomessa</p>
-      </a>
-    </div>
-    <div class="link-box violetti">
-      <a href="koti.html">
-        <span class="material-symbols-outlined">home</span>
-        <h2>Koti</h2>
-        <p>Asuminen, vuokraus ja kodinhoito</p>
-      </a>
-    </div>
-    <div class="link-box sininen">
-      <a href="kulttuuri.html">
-        <span class="material-symbols-outlined">theater_comedy</span>
-        <h2>Kulttuuri</h2>
-        <p>Kulttuuriuutiset ja tapahtumat</p>
-      </a>
-    </div>
-    <div class="link-box turkoosi">
-      <a href="liikenne.html">
-        <span class="material-symbols-outlined">directions_bus</span>
-        <h2>Liikenne</h2>
-        <p>Julkinen liikenne, aikataulut, matkustaminen</p>
-      </a>
-    </div>
-    <div class="link-box turkoosi">
-      <a href="luonto.html">
-        <span class="material-symbols-outlined">park</span>
-        <h2>Luonto</h2>
-        <p>Luontoharrastus, retkeily ja ympäristöpalvelut</p>
-      </a>
-    </div>
-    <div class="link-box sininen">
-      <a href="media.html">
-        <span class="material-symbols-outlined">satellite_alt</span>
-        <h2>Media</h2>
-        <p>TV, radio, podcastit ja mediatalot</p>
-      </a>
-    </div>
-    <div class="link-box turkoosi">
-      <a href="matkailu.html">
-        <span class="material-symbols-outlined">flight</span>
-        <h2>Matkailu</h2>
-        <p>Matkakohteet, varaussivut ja majoitus</p>
-      </a>
-    </div>
-    <div class="link-box sininen">
-      <a href="musiikki.html">
-        <span class="material-symbols-outlined">music_note</span>
-        <h2>Musiikki</h2>
-        <p>Kuuntele musiikkia ja radioita verkossa</p>
-      </a>
-    </div>
-    <div class="link-box violetti">
-      <a href="oikeus.html">
-        <span class="material-symbols-outlined">gavel</span>
-        <h2>Oikeus</h2>
-        <p>Laki, oikeusapupalvelut ja neuvonta</p>
-      </a>
-    </div>
-    <div class="link-box violetti">
-      <a href="pankit.html">
-        <span class="material-symbols-outlined">account_balance_wallet</span>
-        <h2>Pankit</h2>
-        <p>Pankkipalvelut ja tunnistautuminen</p>
-      </a>
-    </div>
-    </div class="link-box sininen">
-      <a href="ruoka.html">
-        <span class="material-symbols-outlined">restaurant</span>
-        <h2>Ruoka</h2>
-        <p>Reseptit ja ruokakaupat</p>
-      </a>
-    </div>
-    <div class="link-box oranssi">
-      <a href="sukututkimus.html">
-        <span class="material-symbols-outlined">family_restroom</span>
-        <h2>Sukututkimus</h2>
-        <p>Sukuseurat ja tutkimustyökalut</p>
-      </a>
-    </div>
-    <div class="link-box turkoosi">
-      <a href="sää.html">
-        <span class="material-symbols-outlined">cloud</span>
-        <h2>Sää</h2>
-        <p>Säätiedot ja sääpalvelut</p>
-      </a>
-    </div>
-    <div class="link-box sininen">
-      <a href="taiteet.html">
-        <span class="material-symbols-outlined">palette</span>
-        <h2>Taiteet</h2>
-        <p>Taidemuseot, näyttelyt ja galleriat</p>
-      </a>
-    </div>
-    <div class="link-box oranssi">
-      <a href="tiede.html">
-        <span class="material-symbols-outlined">science</span>
-        <h2>Tiede</h2>
-        <p>Tieteelliset uutiset, tapahtumat ja julkaisut</p>
-      </a>
-    </div>
-    <div class="link-box violetti">
-      <a href="terveys.html">
-        <span class="material-symbols-outlined">health_and_safety</span>
-        <h2>Terveys</h2>
-        <p>Neuvonta, hyvinvointi ja terveyspalvelut</p>
-      </a>
-    </div>
-    <div class="link-box harmaa">
-      <a href="tekniikka.html">
-        <span class="material-symbols-outlined">precision_manufacturing</span>
-        <h2>Tekniikka</h2>
-        <p>Tekniikka, digituki ja kodinelektroniikka</p>
-      </a>
-    </div>
-    <div class="link-box harmaa">
-      <a href="urheilu.html">
-        <span class="material-symbols-outlined">sports_soccer</span>
-        <h2>Urheilu</h2>
-        <p>Uutiset, tulokset ja lajiliitot</p>
-      </a>
-    </div>
-    <div class="link-box harmaa">
-      <a href="vapaa-aika.html">
-        <span class="material-symbols-outlined">sports_esports</span>
-        <h2>Vapaa-aika</h2>
-        <p>Harrastukset ja ajanvietto</p>
-      </a>
-    </div>
-    <div class="link-box sininen">
-      <a href="viihde.html">
-        <span class="material-symbols-outlined">movie</span>
-        <h2>Viihde</h2>
-        <p>Elokuvat, sarjat ja pelipalvelut</p>
-      </a>
-    </div>
-    <div class="link-box harmaa">
-      <a href="verkkokaupat.html">
-        <span class="material-symbols-outlined">shopping_cart</span>
-        <h2>Verkkokaupat</h2>
-        <p>Suosituimmat kotimaiset verkkokaupat</p>
-      </a>
-    </div>
-  </div>
+  naytaPaiva();
+  setInterval(naytaPaiva, 30000);
+</script>
   </main>
   <footer class="site-footer" role="contentinfo">
     <img src="https://seniorsurf.fi/wp-content/uploads/seniorsurf.svg" alt="SeniorSurf logo" class="footer-logo">
